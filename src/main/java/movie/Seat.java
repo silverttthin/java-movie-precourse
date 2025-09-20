@@ -1,3 +1,5 @@
+package movie;
+
 public class Seat {
 
     private final SeatGrade seatGrade;

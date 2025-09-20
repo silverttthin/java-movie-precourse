@@ -4,6 +4,11 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
+import movie.Movie;
+import movie.Screening;
+import movie.Theater;
+import movie.Ticket;
+import movie.User;
 import org.junit.jupiter.api.Test;
 
 class UserTest {

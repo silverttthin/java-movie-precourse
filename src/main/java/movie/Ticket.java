@@ -1,3 +1,5 @@
+package movie;
+
 public class Ticket {
 
     private User User;
