@@ -1,3 +1,4 @@
+import java.time.Duration;
 import java.time.LocalDate;
 
 public class Movie {
@@ -5,10 +6,10 @@ public class Movie {
     private String title;
     private LocalDate startScreeningDate;
     private LocalDate endScreeningDate;
-    private int runningTimeMinutes;
+    private Duration runningTimeMinutes;
 
     public Movie(String title, LocalDate startScreeningDate, LocalDate endScreeningDate,
-        int runningTimeMinutes) {
+        Duration runningTimeMinutes) {
         this.title = title;
         this.startScreeningDate = startScreeningDate;
         this.endScreeningDate = endScreeningDate;
@@ -27,7 +28,7 @@ public class Movie {
         return endScreeningDate;
     }
 
-    public int getRunningTimeMinutes() {
+    public Duration getRunningTimeMinutes() {
         return runningTimeMinutes;
     }
 }
