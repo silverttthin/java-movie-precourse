@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class User {
 
@@ -32,5 +33,13 @@ public class User {
 
     public void putInWishList(Ticket ticket) {
         this.wishlist.addTicket(ticket);
+    }
+
+    public void putTicketsInWishList(List<Ticket> tickets) {
+        this.wishlist.addTicketAll(tickets);
+    }
+
+    public void pay() {
+        this.wishlist.getTickets();
     }
 }

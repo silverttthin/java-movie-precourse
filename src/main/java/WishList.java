@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class WishList {
 
@@ -13,5 +14,9 @@ public class WishList {
 
     public void addTicket(Ticket ticket) {
         tickets.add(ticket);
+    }
+
+    public void addTicketAll(List<Ticket> tickets) {
+        this.tickets.addAll(tickets);
     }
 }

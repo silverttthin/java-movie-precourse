@@ -34,10 +34,9 @@ public class Screening {
         Ticket ticket = new Ticket(
             user,
             this,
-            'A',
-            1
+            a,
+            i
         );
-        user.putInWishList(ticket);
         return ticket;
     }
 }
