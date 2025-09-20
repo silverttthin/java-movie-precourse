@@ -5,17 +5,24 @@ public class Screening {
 
     private final Movie movie;
     private final LocalDateTime screeningTime;
-    private final HashMap<String, Seat[]> seats;
+    private final HashMap<Character, Seat[]> seats;
 
-    public Screening(Movie movie, LocalDateTime screeningTime, HashMap<String, Seat[]> seats) {
+    public Screening(Movie movie, LocalDateTime screeningTime, HashMap<Character, Seat[]> seats) {
         this.movie = movie;
         this.screeningTime = screeningTime;
         this.seats = seats;
     }
 
-    public static Screening of(Movie movie, LocalDateTime screeningTime,
-        HashMap<String, Seat[]> seats) {
-        return new Screening(movie, screeningTime, seats);
+
+    public Movie getMovie() {
+        return movie;
     }
 
+    public LocalDateTime getScreeningTime() {
+        return screeningTime;
+    }
+
+    public HashMap<Character, Seat[]> getSeats() {
+        return seats;
+    }
 }
