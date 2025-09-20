@@ -33,12 +33,11 @@ public class Screening {
     }
 
     public Ticket issueTicket(User user, char a, int i) {
-        Ticket ticket = new Ticket(
+        return new Ticket(
             user,
             this,
             a,
             i
         );
-        return ticket;
     }
 }
