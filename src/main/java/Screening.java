@@ -25,4 +25,19 @@ public class Screening {
     public HashMap<Character, Seat[]> getSeats() {
         return seats;
     }
+
+    public boolean isSameMovieName(String searchKeyword) {
+        return this.movie.getTitle().equals(searchKeyword);
+    }
+
+    public Ticket issueTicket(User user, char a, int i) {
+        Ticket ticket = new Ticket(
+            user,
+            this,
+            'A',
+            1
+        );
+        user.putInWishList(ticket);
+        return ticket;
+    }
 }

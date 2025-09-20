@@ -29,4 +29,8 @@ public class User {
     public WishList getWishlist() {
         return wishlist;
     }
+
+    public void putInWishList(Ticket ticket) {
+        this.wishlist.addTicket(ticket);
+    }
 }

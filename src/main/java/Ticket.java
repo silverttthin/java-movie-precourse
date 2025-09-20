@@ -10,6 +10,7 @@ public class Ticket {
         this.screening = screening;
         this.row = row;
         this.column = column;
+        screening.getSeats().get(row)[column].occupy();
     }
 
     public User getUser() {

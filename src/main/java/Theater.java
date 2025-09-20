@@ -1,6 +1,7 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Theater {
 
@@ -12,6 +13,9 @@ public class Theater {
 
         for (char row = 'A'; row <= 'E'; row++) {
             Seat[] seat = new Seat[5];
+            for (int i = 0; i < 5; i++) {
+                seat[i] = new Seat(SeatGrade.S);
+            }
             this.seats.put(row, seat);
         }
 
@@ -42,5 +46,12 @@ public class Theater {
 
     public ArrayList<Screening> getScreenings() {
         return screenings;
+    }
+
+    public List<Screening> searchByName(String searchKeyword) {
+        return this.getScreenings()
+            .stream()
+            .filter(_screening -> _screening.isSameMovieName(searchKeyword))
+            .toList();
     }
 }
